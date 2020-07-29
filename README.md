@@ -6,7 +6,7 @@
 1. Clone the repository:
 ```
 git clone https://github.com/gabrielcocenza/boltons_challenge.git
-cd cs-helper
+cd boltons_challenge
 ```
 
 2. Run Docker
