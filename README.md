@@ -5,7 +5,7 @@
 
 1. Clone the repository:
 ```
-git clone https://gitlab.com/devraccoon/customer-sucess.git
+git clone https://github.com/gabrielcocenza/boltons_challenge.git
 cd cs-helper
 ```
 
