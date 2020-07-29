@@ -1,0 +1,31 @@
+version: '2'
+
+services:
+  postgres:
+    image: 'postgres:9.5'    
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
+    ports:
+      - '5432:5432'    
+    environment:
+      POSTGRES_USER: boltons
+      POSTGRES_PASSWORD: admin
+      POSTGRES_HOST_AUTH_METHOD: trust
+    networks:
+      - default
+    
+
+  website:
+    build: .
+    command: gunicorn -b 0.0.0.0:7273 app:app
+    ports:
+      - '7273:7273'
+    depends_on:
+      - postgres
+    links:
+      - postgres:postgres
+    restart: always
+    
+volumes:
+  postgres:
+  
