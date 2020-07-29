@@ -63,9 +63,6 @@ You should receive an answer like this:
 }
 ```
 
-
-### Customer Success App
-
 Supporting Technology:
 - Flask
 - Postgre
